@@ -17,19 +17,19 @@ export default class ApplicationContainer extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({applications: []});
         this.loadApps();
     }
 
     loadApps() {
-        console.log('Loading apps...');
+        this.apps = [];
         getData((data) => { 
             let applications = data.applications;
+            let components = [];
             for (let i = 0; i < applications.length; i++) {
                 const element = applications[i];
-                this.state.applications.push(<ApplicationBox name={element.name} url={element.url} />);
-                console.log("hello")
+                components.push(<ApplicationBox key={i} name={element.name} url={element.url} />);
             }
+            this.setState({applications: components});
         });
     }
 
@@ -40,7 +40,9 @@ export default class ApplicationContainer extends React.Component {
                 <ApplicationCreateModal />
                 <hr/>
                 
-                <div id={this.appListId}>{this.state.applications}</div>
+                <div id={this.appListId}>
+                    {this.state.applications}
+                </div>
             </div>
         )
     }
