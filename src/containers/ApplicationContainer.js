@@ -2,6 +2,7 @@ import React from 'react';
 
 import ApplicationBox from '../components/ApplicationBox';
 import ApplicationCreateModal from '../components/ApplicationCreateModal';
+import CategoryCreateModal from '../components/CategoryCreateModal';
 import { getData } from "../lib/data/DataFile";
 
 export default class ApplicationContainer extends React.Component {
@@ -38,6 +39,7 @@ export default class ApplicationContainer extends React.Component {
             <div id={this.appContainerId}>
                 <h3>My Applications</h3>
                 <ApplicationCreateModal />
+                <CategoryCreateModal />
                 <hr/>
                 
                 <div id={this.appListId}>
