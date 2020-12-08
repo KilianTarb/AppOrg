@@ -33,9 +33,15 @@
   background-color: grey;
 }
 .application-img {
+  padding: 1px;
   float: left;
 }
-
+.application-img > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30px;
+}
 /**
  * Button Styles
  */
