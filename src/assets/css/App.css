@@ -18,18 +18,22 @@
   float: left;
 }
 .application-title {
-  border-top-width: 1px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
+  border-left-width: 1px;
   border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
   border-style: solid;
-  border-color: black;
   padding: 10px;
 
   text-align: center;
+
+  float: left;
 }
 .application-title:hover {
   background-color: grey;
+}
+.application-img {
+  float: left;
 }
 
 /**
