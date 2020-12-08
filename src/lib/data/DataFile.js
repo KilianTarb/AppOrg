@@ -71,12 +71,14 @@ export const getConstellationDataPath = () => {
  */
 export const getNewData = () => {
     return JSON.stringify({
-        applications: []
+        applications: [],
+        categories: []
     });
 }
 
 /**
  * Returns all applications data.
+ * @param {object[]} callback Data object
  */
 export const getData = (callback) => {
     if (!dataFileExists) {
