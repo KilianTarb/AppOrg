@@ -1,4 +1,5 @@
 import React from 'react'
+import { createCategory } from "../lib/data/Models";
 
 export default class CategoryCreateForm extends React.Component {
     constructor(props) {
@@ -13,7 +14,7 @@ export default class CategoryCreateForm extends React.Component {
     }
 
     handleSubmit(e) {
-        createApplication(this.state.categoryName, this.state.appUrl);
+        createCategory(this.state.categoryName, this.state.appUrl);
     }
 
     render() {
